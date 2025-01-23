@@ -386,14 +386,19 @@ font-weight: 700;
 
  
   .footer{
-    text-align: center;
-    /* justify-items: left; */
-    justify-content: left;
+    justify-content: center;
   }
   .footer-content{
     grid-template-columns: repeat(1,1fr);
-  
-    text-align: center;
+    /* justify-content: left; */
+    justify-items: left;
+    text-align: left;
+    align-items: left;
+  }
+
+  .about ul{
+    text-align: left;
+    align-items: left;
   }
 
 }
