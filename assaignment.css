@@ -261,38 +261,27 @@ main{
 footer{
   max-width: 1440px;
   margin: 0 auto;
-  /* background-color: #01ACFD;
-  color: white; */
 }
 
 .footer{
   justify-content: center;
-  text-align: center;
+  text-align: left;
   background: rgb(1, 172, 253);
   color: white;
 }
 
 .footer-content{
-  padding: 123px 228px 174px 140px;
-  align-items: center;
-  justify-content: space-around;
-  align-items: center;
-  margin: 0 auto;
-  max-width: 1070px;
-  height: 222px;
-}
-
-.education{
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  width: 399px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  /* align-items: flex-start;
+  justify-content: space-between; */
+ padding: 123px 228px 175px 141px;
 }
 
 .edu{
-  justify-content: center;
+  display: flex;
   align-items: center;
-  text-align: left;
+  gap: 20px;
 }
 .edu-img{
   filter: grayscale(100%);
@@ -301,38 +290,43 @@ footer{
 }
 .edu-title{
   font-weight: bold;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
 }
 .edu-description{
-  margin: auto;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
+  margin-top: 30px;
 }
 
 
-ul > li{
-  margin-bottom: 20px;
+.education, .about, .touch{
+  flex: 1;
+  margin: 0 20px;
 }
 
 .about{
   justify-content: center;
   align-items: center;
 }
-.about-title{
-  justify-content: center;
-  align-items: center;
+.about-title, .touch{
   font-weight: bold;
   font-size: 1.5rem;
+  margin-bottom: 30px;
 }
 
 .touch{
-  justify-content: center;
-  text-align: center;
-  align-items: center;
+  font-size: 1.62rem;
 }
 .touch-title{
   font-weight: bold;
   font-size: 1.62rem;
 }
+
+.about-item{
+  list-style: none;
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+}
+
 
 
 /* responsive media */
@@ -357,15 +351,52 @@ ul > li{
     width: calc(100% - 40px);
   }
   .Curriculum-card{
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
     grid-template-columns: 1fr;
     gap: 12px;
     width: 350px;
     height: 100%;
   }
+
+  /* .our-stories{
+    width: calc((100% - auto)/2);
+  } */
   .story-content{
     grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    /* margin-right: 10px; */
+  }
+  .story-content .story-card{
+    margin: 0 auto;
+    gap: 10px;
+  }
+
+  .story-card{
+width: 173.35px;
+height: 179.59px;
+margin: 0px 11px;
+  }
+
+  .story-card img{
+    width: 173.27px;
+height: 105.39px;
+  }
+  .card-title{
+    font-size: 9.13px;
+font-weight: 700;
+  }
+
+
+ 
+  .footer{
+    text-align: center;
     justify-items: center;
   }
+  .footer-content{
+    grid-template-columns: repeat(1,1fr);
+    /* justify-content: center; */
+    text-align: center;
+  }
+
 }
