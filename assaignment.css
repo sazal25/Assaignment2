@@ -115,19 +115,30 @@ main{
 }
 
 /* Curriculum card section style */
+
+.section-title{
+  font-weight: bold;
+  font-size: 2.8rem;
+  margin-top: 60px auto 80px;
+}
+
 .Curriculum{
   justify-content: center;
-  /* align-items: center; */
   text-align: center;
+  background-image: url(assets/bg.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
 }
 .Curriculum-card{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
   width: 1160px;
   height: 480px;
   margin: 0 auto;
-  text-align: center;
+  /* text-align: center;
   justify-content: space-around;
   align-items: center;
-  gap: 28px;
+  gap: 28px; */
 }
 
 .card{
@@ -136,6 +147,7 @@ main{
   /* justify-content: center;
   text-align: center; */
   align-items:center;
+  border-radius: 18px;
 }
 
 .card-img{
@@ -150,6 +162,7 @@ main{
 .card-description{
   font-weight: 600px;
   font-size: 15px;
+  text-align: center;
 }
 
 .section-btn{
@@ -179,9 +192,180 @@ main{
 .card3{
   background-color: #F2E8FF;
 }
+
+/* stories section style */
+.our-stories{
+  justify-content: center;
+  text-align: center;
+  background-image: url(assets/bg.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background: url(image),linear-gradient(0.00deg, rgba(254, 163, 1, 0.3),rgba(255, 255, 255, 0.3) 100%);
+}
+
+.stories{
+  gap: 19px;
+  justify-content: center;
+}
+.story-1{
+  width: 540px;
+  height: 630px;
+  gap: 19px;
+  border-radius: 16px;
+  background: rgb(255, 255, 255);
+}
+.img1{
+  width: 540px;
+  height: 337px;
+}
+
+.story-content{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 19px;
+}
+.story-card{
+  width: 290px;
+  height: 301px;
+  background: rgb(255, 255, 255);
+  border-radius: 16px;
+  border-collapse: collapse;
+}
+.card-title{
+  font-weight: bold;
+  font-size: 15px;
+  align-items: center;
+  margin: 23px 54px 33px 37px;
+}
+.img{
+  width: 291px;
+  height: 177px;
+}
+
+.story-btn{
+  width: 197px;
+  height: 50px;
+  background-color: #111111;
+  border: none;
+  border-radius: 12px;
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 1.25rem;
+  padding: 10px 40px;
+  margin: 70px auto;
+}
+
+
+
+/* footer section style */
+footer{
+  max-width: 1440px;
+  margin: 0 auto;
+  /* background-color: #01ACFD;
+  color: white; */
+}
+
+.footer{
+  justify-content: center;
+  text-align: center;
+  background: rgb(1, 172, 253);
+  color: white;
+}
+
+.footer-content{
+  padding: 123px 228px 174px 140px;
+  align-items: center;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1070px;
+  height: 222px;
+}
+
+.education{
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 399px;
+}
+
+.edu{
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+.edu-img{
+  filter: grayscale(100%);
+  width: 83px;
+  height: 81px;
+}
+.edu-title{
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+.edu-description{
+  margin: auto;
+  font-size: 1.25rem;
+}
+
+
+ul > li{
+  margin-bottom: 20px;
+}
+
+.about{
+  justify-content: center;
+  align-items: center;
+}
+.about-title{
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.touch{
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.touch-title{
+  font-weight: bold;
+  font-size: 1.62rem;
+}
+
+
 /* responsive media */
 @media screen and (max-width : 576px) {
-  .navbar{
-    display: block;
+  .brand-name,
+  .nav-links,
+  .btn,
+  .section-btn,
+  .story-1{
+    display: none;
+  }
+  .banner{
+    flex-direction: column-reverse;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .banner-content{
+    justify-items: center;
+  }
+
+  .banner img{
+    width: calc(100% - 40px);
+  }
+  .Curriculum-card{
+    flex-direction: column;
+    align-items: center;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    width: 350px;
+    height: 100%;
+  }
+  .story-content{
+    grid-template-columns: repeat(2,1fr);
+    justify-items: center;
   }
 }
