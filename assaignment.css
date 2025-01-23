@@ -359,13 +359,9 @@ footer{
     height: 100%;
   }
 
-  /* .our-stories{
-    width: calc((100% - auto)/2);
-  } */
   .story-content{
     grid-template-columns: repeat(2,1fr);
     align-items: center;
-    /* margin-right: 10px; */
   }
   .story-content .story-card{
     margin: 0 auto;
@@ -391,11 +387,12 @@ font-weight: 700;
  
   .footer{
     text-align: center;
-    justify-items: center;
+    /* justify-items: left; */
+    justify-content: left;
   }
   .footer-content{
     grid-template-columns: repeat(1,1fr);
-    /* justify-content: center; */
+  
     text-align: center;
   }
 
